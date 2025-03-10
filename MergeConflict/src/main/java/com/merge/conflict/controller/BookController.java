@@ -1,6 +1,8 @@
 package com.merge.conflict.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,14 +29,17 @@ public class BookController
 	}
 	
 	@GetMapping("/getBookById/{id}")
-	public Book getBookById(@PathVariable("id")String id)
+	public ResponseEntity<Book> getBookById(@PathVariable("id")String id)
 	{
-		return bookService.getBookById(id);
+
+		Book x= bookService.getBookById(id);
+		return new ResponseEntity<>(x,HttpStatus.ACCEPTED);
 	}
 	
 	@GetMapping("/getAllBook")
 	public List<Book> getMethodName() 
 	{
+
 		return bookService.getAllBook();
 	}
 	
