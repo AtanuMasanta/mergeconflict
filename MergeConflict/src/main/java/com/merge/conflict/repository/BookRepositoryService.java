@@ -44,6 +44,8 @@ public class BookRepositoryService implements bookRepository
 	
 	public String fun()
 	{
-		return "enjoyy";
+		String s1="all is well ";
+		String ans= s1.substring(3);
+		return ans;
 	}
 }
