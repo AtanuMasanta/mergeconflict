@@ -41,5 +41,9 @@ public class BookRepositoryService implements bookRepository
 		
 		return list;
 	}
-
+	
+	public String fun()
+	{
+		return "enjoyy";
+	}
 }
