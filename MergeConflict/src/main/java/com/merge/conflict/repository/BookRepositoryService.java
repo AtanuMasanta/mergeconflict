@@ -30,6 +30,7 @@ public class BookRepositoryService implements bookRepository
 		{
 			if(b.getId().equals(id))
 			{
+				b.setId("alpha-100");
 				return b;
 			}
 		}
@@ -44,8 +45,8 @@ public class BookRepositoryService implements bookRepository
 	
 	public String fun()
 	{
-		String s1="all is well ";
-		String ans= s1.substring(3);
-		return ans;
+		String str="atanu";
+		String s="wel come"+str;
+		return s;
 	}
 }
