@@ -38,6 +38,11 @@ public class BookController
 		return bookService.getAllBook();
 	}
 	
+	@GetMapping("/doFun")
+	public String fun()
+	{
+		return bookService.fun();
+	}
 	
 	
 }
